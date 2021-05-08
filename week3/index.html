@@ -8,20 +8,57 @@
   </head>
   <body>
     <h1>WDD 330 portfolio</h1>
-    <h2>Week 2</h2>
+    <h2>Week 3</h2>
     <ol>
       <li>Notes
-      <p> <h2>Ch2: Programming Basics </h2>
-		There's no need to actually use a semicolon to terminate a statement, though best practice is to use one
-		<br>Const and let are used to declare variable instead of var
-		<br>Exponentiation is done using "**"
-		<br>hard Equality uses "===" to compare values and their data types</p>
-		<p><h2>Ch3: Arrays, Logic, and Loops </h2>
-		Arrays can contain a variety of different data types in the same array
-		<br>Numbers getting sorted based on thier first digit using the .sort()</p>
-		<p> <h2>Ch4: Functions</h2>
-		If you pass too few arguments to a function, the arguments that are not assigned defualt to undefined
-		<br>If you pass too many arguments to a function, any values passed beyond the allowed number of arguments are discarded</p>
+      <p> <h2>Object Method: This </h2>
+		“This” key word in java script OOP behaves unlike most other programming languages. It can be used in any function, even if it’s not a method of an object.
+		<br>Arrow functions are special: they don’t have their “own” this
+		
+		<p><h2>Ch5: Objects </h2>
+		Object literals allow objects to be created quickly without the need for defining a class
+		<br>Access the properties of an object using the dot notation
+		<br>Access an object’s properties using bracket notation
+		<br>To call an object’s method use dot or bracket notation
+		<br>Loop through all of an object’s properties and methods by using a for in loop
+		<br>New properties and methods can be added/deleted to objects at any time in a program
+		<br>Object can contain other objects
+		<br>The parse() method takes a string of data in JSON format and returns a JavaScript object
+		<br>The stringify() method takes a JavaScript object and returning a string of JSON data
+		<br>Math has several math methods such as .exp(), .pow(), .sqrt(), and many more
+		<br>Date objects contain information about date and times
+		</p>
+
+		<p> <h2>Ch6: Document Object Model</h2>
+		The Document Object Model (DOM) represents an HTML document as a network of connected nodes that form a tree-like structure
+		<br>The DOM treats everything on a web page as a node
+		<br>Node Code -  1:element, 2:attribute, 3:text, 8:comment, 9:body
+		<br>DOM Level 0 can still be employed
+		<br>getElementById() returns a reference to the element with a unique id attribute that is given as an argument
+		<br>getElementsByTagName() will return a live node list of all the elements with the tag name that is provided as an argument
+		<br>getElementsByClassName() will return a live node list of all elements that have the class name that is supplied as an argument
+		<br>document.querySelector() allows you to use CSS notation to find thefirstelement in the document that matches that matches a CSS selector provided as an argument
+		<br>getAttribute() method returns the value of the attribute provided as an argument
+		<br>setAttribute can change the value of an element’s attributes
+		<br>classList property is a list of all the classes an element has.
+		<br>createElement() method that takes a tag name as a parameter and returns that element
+		<br>A text node can be created using the document.createTextNode() method
+		<br>Elements can be removed from a page using the removeChild() method
+		<br>The replaceChild() method can be used to replace one node with another
+		</p>
+
+		<p> <h2>Ch7: Events</h2>
+		Event listener are like setting a notification to alert you when something happens
+		<br>The click event occurs when a user clicks with the mouse, presses the Enter key, or taps the screen
+		<br>The addEventListener() method is called on a node object, the node to which the event listener is being applied
+		<br>Whenever an event handler is triggered by an event, the callback function is called
+		<br>There are also the mousedown and mouseup events. These both occurbeforea click event is fired
+		<br>There is the dblclick event, which occurs when the user doubleclicks on the element to which the event listener is attached
+		<br>Three events that occur when a user presses a key are: keydown , keypress and keyup 
+		<br>Be careful when using the touchstart event as it fires as soon as a user touches the screen, touchend seems preferrable
+		<br>There are no 'swipe' events. These need to be created by using a combination of touchstart , touchmove , and touchleave 
+		<br>An event listener can be removed using the removeEventListener()
+		</p>
 		
 </li>
     </ol>
