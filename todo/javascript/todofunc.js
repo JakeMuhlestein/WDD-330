@@ -1,3 +1,5 @@
+import * as storeHelp from './storeinfo.js'
+import * as helper from './helperfunc.js'
 /**************************
  * 
  * ***********************/
@@ -10,12 +12,6 @@ export default class ToDos {
 			this.LSkey = this.parentElement.id;
 
 	}
-	//Add list items
-    addToDo(){
-       	const newTask = document.getElementById('newTask');
-       	saveToDo(this.LSkey, taskContent);
-       	this.showToDoList();
-    }
 
     //show list items
     showAllToDos(){
@@ -24,8 +20,45 @@ export default class ToDos {
     	if(toDoList != null) {
     		this.addEventListeners
     	}
-
     } 
+
+	//Add list items
+    addToDo(){
+       	const newTask = document.getElementById('newTask');
+       	saveToDo(this.LSkey, taskContent);
+       	this.showToDoList();
+    }
+
+    //delete list item
+    toDoDelete(item) {
+    	let task = toDoList.findIndex(task => task.id == item);
+    	toDoList.splice(task, 1);
+    	storeHelp.storeLS(this.LSkey, toDoList);
+    	this.showAllToDos();
+    }
+
+    //check box functionality
+    toDoDone(item) {
+    	let task = toDoList.findIndex(task => task.id == item);
+    	toDoList[task].completed = !toDoList[task].completed;
+    	storeHelp.storeLS(this.LSkey, toDoList);
+    	itemDone(item);
+
+    }
+
+    filterList(status){
+    	status = filterBy(status);
+    	const filter = toDoList.filter(task => {
+    		if (status != null) {
+    			return task.completed == status;
+    		}
+    		else {
+    			return task;
+    		}
+    	})
+    	displayToDos(this.parentElement, filter);
+    	this.addEventListeners();
+    }
 
     //add Event Listener
     addEventListeners() {
@@ -44,20 +77,9 @@ export default class ToDos {
 
     }
 
-    //check box functionality
-    toDoDone(item) {
-    	let task = toDoList.findIndex(task => task.id == item);
-    	toDoList[task].completed = !toDoList[task].completed;
-    	storeHelp.storeLS(this.LSkey, toDoList);
-
-    }
-
-
-
-
 
 }
 
 
-import * as storeHelp from './storeinfo.js'
-import * as helper from './helperfunc.js'
+
+
