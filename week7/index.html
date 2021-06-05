@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>WDD 330 portfolio</h1>
+    <h2>Week 7</h2>
+    <ol>
+      <li>Notes
+		
+		<p><h2>Chapter 11: Further Functions</h2>
+		The call() method can be used to set the value of this inside a function to an object that is provided as the first argument
+		<br>If the function that’s called requires any parameters, these need to be provided as arguments after the first argument, which is always the value of this
+		<br>If a function doesn’t refer to an object as this in its body, it can still be called using the call() method, but you need provide null as its first argument
+		<br>If a function takes some time to compute a return value, we can save the result in a cache property
+		<br>An Immediately Invoked Function Expression (IIFE) is an anonymous function that is invoked as soon as it’s defined
+		<br>An IIFE can be used to set up any initialization code that there’ll be no need for again
+		<br>An IIFE can be used to enclose a block of code inside its own private scope so it doesn’t interfere with any other part of the program
+		<br>JavaScript is a single-threaded environment, which means only one piece of code will ever be processed at a time
+		<br>A promise represents the future result of an asynchronous operation
+		<br>A promise is created using a constructor function. This takes a function called an executor as an argument
+		<br>Once a promise has been settled, the then() method can be used to deal with the outcome 
+		<br>Functions can accept another function as an argument (a callback), but they can also return a function
+		<br>One of the key principles in creating closures is that an 'inner' function, which is declared inside another function, has full access to all of the variables declared inside the scope of the function in which it’s declared
+		<br>Closures not only have access to variables declared in a parent function's scope, they can also change the value of these variables
+		<br>*****Question: Are generators like factory functions?
+		<br>Pure Functions
+		<br>&emsp; 1) The return value of a pure function should only depend on the values provided as arguments. It doesn't rely on values from somewhere else in the program
+		<br>&emsp; 2) There are no side-effects. A pure function doesn't change any values or data elsewhere in the program. It only makes non-destructive data transformations and returns new values, rather than altering any of the underlying data
+		<br>&emsp; 3) Referential transparency. Given the same arguments, a pure function will always return the same result 
+		<br>Higher-order functions are functions that accept another function as an argument, or return another function as a result, or both
+	
+		</p>
+
+		<p><h2>Chapter 13: AJAX</h2>
+		Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading. This enables data to be sent and received in the background, as well as portions of a page to be updated in response to user events, while the rest of the program continues to run
+		<br>Fetch API, which is currently a living standard for requesting and sending data asynchronously across a network
+		<br>The Fetch API introduced the Response interface that deals with the object that’s returned when the promise is fulfilled
+		<br>The redirect() method can be used to redirect to another URL. It creates a new promise that resolves to the response from the redirected URL
+		<br>The text() method takes a stream of text from the response, reads it to completion and then returns a promise that resolves to a USVSting object that can be treated as a string in JavaScript
+		<br>The blob() method is used to read a file of raw data, such as an image or a spreadsheet. Once it has read the whole file, it returns a promise that resolves with a blob object
+		<br> The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object
+		<br>HTTP headers are used to pass on any additional information about a request or response. Typical information contained in headers includes the file-type of the resource, cookie information, authentication information and when the resource was last modified
+		<br>The Fetch API introduced a Headers interface, which can be used to create a Headers object, which can then be added as a property of Request and Response objects
+		<br>Most forms will have an action attribute that specifies the URL to use if the form is sent without using Ajax. It will also have a method attribute that will specify the HTTP verb to use
+		<br>The Fetch API includes the FormData interface, which makes it much easier to submit information in forms using Ajax
+	
+		</p>
+
+		
+</li>
+    </ol>
+    
+  </body>
+</html>
 
