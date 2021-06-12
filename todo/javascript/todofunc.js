@@ -81,5 +81,14 @@ export default class ToDos {
 }
 
 
-
+//make one item show up in HTML
+function renderOneToDo(task) {
+    const oneTask = document.createElement('li');
+    task.completed ? oneTask.classList.toggle('completed') : '';
+    oneTask.innerHTML = 
+        `<input id="${task.id}" name="${task.content}" type="checkbox" value="none" ${task.completed ? 'checked' : ''}>
+        <label for="${task.id}">${task.content}</label>
+        <div class="remove">X</div>`;
+    return oneTask;
+}
 
