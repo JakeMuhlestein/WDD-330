@@ -1,18 +1,18 @@
 import ToDos from './todofunc.js';
 
-const ToDoList = new ToDos('todo');
+const newToDoList = new ToDos('todo');
 const input = document.getElementById('newTask');
 const addNew = document.getElementById('addTask');
 
 
 
 window.addEventListener('load', () => {
-  myToDoList.showToDoList();
-  myToDoList.addTabListeners();
+  newToDoList.showToDoList();
+  newToDoList.addTabListeners();
 });
 
 addNew.addEventListener('click', () => {
-  myToDoList.addToDo();
+  newToDoList.addToDo();
 });
 
 inputField.addEventListener('keyup', function(event) {
