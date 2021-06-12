@@ -1,4 +1,4 @@
-import ToDos from './Todofunc.js';
+import ToDos from './todofunc.js';
 
 const ToDoList = new ToDos('todo');
 const input = document.getElementById('newTask');
