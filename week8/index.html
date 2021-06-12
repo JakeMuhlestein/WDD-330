@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>WDD 330 portfolio</h1>
+    <h2>Week 8</h2>
+    <ol>
+      <li>Notes
+		
+		<p><h2>Chapter 8: CSS3 Transforms and Transitions</h2>
+		The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page
+		<br>One can manipulate an element’s appearance using transform functions
+		<br>Translation functions allow you to move elements left, right, up, or down
+		<br>When you employ a translation function, you’re moving elements without impacting the flow of the document
+		<br>The scale(x,y) function scales an element by the defined factors horizontally then vertically
+		<br>If only one value is provided, it will be used for both the x and y values, growing or shrinking your element or pseudo-element while maintaining the original aspect ratio
+		<br>scaling, like translation, has no impact on the document flow
+		<br>The rotate() function rotates an element around the point of origin by a specified angle value
+		<br>The skew(x,y) function specifies a skew along the x and y axes
+		<br>steps to create a simple transition using only CSS:
+		<br>&emsp; 1) Declare the original state of the element in the default style declaration
+		<br>&emsp; 2) Declare the final state of your transitioned element; for example, a :hover state
+		<br>&emsp; 3) Include the transition functions in your default style declaration using the transition properties
+		<br>To support older WebKit browsers, you need to include the -webkit- prefix for all of your transition properties
+		<br>The transition-duration property sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state
+		<br>The transition properties allow for multiple transitions in one call
+		<br>One can define starting and ending states, but there’s no fine-grained control over any intermediate states
+		<br>The animation-iteration-count property lets you define how many times the animation will play through
+		<br>The animation-delay property is used to define how many milliseconds or seconds to wait before the browser begins the animation
+		</p>
+
+		<p><h2>Chapter 12: Canvas, SVG, and Drag and Drop</h2>
+		The first step to using canvas is to add a canvas element to the page
+		<br>the coordinate system in the canvas element is different from the Cartesian coordinate system. In the canvas coordinate system, the top-left corner is (0,0)
+		<br>Anonymous functions are much like regular functions except they are without names
+		<br>Rhere’s no built-in method for drawing circles or other shapes. To draw more interesting shapes, one must first lay out the path of the shape
+		<br>Pathscreate a blueprint for your lines, arcs, and shapes, but paths are invisible until you give them a stroke
+		<br>Radians are a unit used to measure angles, and the symbol π denotes a measurement in radians 
+		<br>Once an image is on the canvas , one can use the getImageData method from the Canvas API to manipulate the pixels of that image
+		<br>getImageData will return an ImageData object, which contains three properties: width , height , and data 
+		<br>data contains information about the pixels in the ImageData object in the form of an array
+		<br>Before any text is written to the canvas , what is there should be cleared
+		<br>A major downside of canvas in its current form is its lack of accessibility. The canvas doesn’t create a DOM node, is not a text-based format, and is thus essentially invisible to tools such as screen readers
+		<br>Much as with canvas, you can draw images into a container that you create using Raphaël
+		<br>Canvas allows for pixel manipulation, as we saw when we turned our video from color to black and white. One downside of canvas is that it operates in what’s known asimmediate mode. This means that if you ever want to add more to the canvas, you’re unable to simply add to what’s already there. Every time you finish drawing a shape, the canvas no longer has access to that shape, because it won’t persist as an object that you can modify. So if you want to add to what you’ve already drawn on the canvas, you must redraw the new shape from scratch. Still, canvas does allow you to save the images you create to a PNG or JPEG file
+		<br>what you draw to SVG is accessible via the DOM, because its mode isretained mode, meaning that the structure of the image is preserved in the XML document that describes it. SVG also has, at this time, a more complete set of tools to help you work with it, such as the Raphaël library and Inkscape. However, since SVG is a file format—rather than a set of methods that allows you to dynamically draw on a surface—you can’t manipulate SVG images the way you can manipulate pixels on canvas. It would have been impossible, for example, to use SVG to convert our color video to black and white as we did with canvas
+		<br>the Drag and Drop API. This API allows us to specify that certain elements are draggable, and then specify what should happen when these draggable elements are dragged over or dropped onto other elements on the page
+		<br>There are several steps to adding drag and drop to your page:
+		<br>&emsp; 1) Set the draggable attribute on any HTML elements you’d like to be draggable
+		<br>&emsp; 2) Add an event listener for the dragstart event on any draggable HTML elements
+		<br>&emsp; 3) Add an event listener for the dragover and drop events on any elements that you want to have accept dropped items
+		<br>draggable is not a Boolean attribute, so you have to explicitly set it to true 
+		<br>DataTransfer objects are one type of object outlined in the Drag and Drop API. These objects allow setting and getting data about the elements that are being dragged
+		<br>In order to override the default behavior on a specific element, It need to be stopped from happening by creating two more event listeners
+		<br>The two events we need to monitor for are dragover and drop .Dragover fires when you drag an item over an element, and drop fires when you drop an item on it.
+		</p>
+
+		
+</li>
+    </ol>
+    
+  </body>
+</html>
+
 
