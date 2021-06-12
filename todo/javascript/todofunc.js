@@ -74,10 +74,7 @@ export default class ToDos {
 				
 			})
 		}
-
     }
-
-
 }
 
 
