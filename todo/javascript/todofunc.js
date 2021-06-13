@@ -65,8 +65,7 @@ export default class ToDos {
 		const listOfItems = Array.from(this.parentElement.children);
 		if (listOfItems.length > 0) {
 			listOfItems.forEach (item => {
-				item.children[0].addEventListener('click' event=> {
-					this.toDoDone(event.currentTarget.id);})
+				item.children[0].addEventListener('click' event=> {this.toDoDone(event.currentTarget.id);})
 				
 				item.children[2].addEventListener('click' event => {
 					this.toDoDelete(event.currentTarget.parentElement.children[0].id);
