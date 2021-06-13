@@ -78,6 +78,23 @@ export default class ToDos {
 }
 
 
+//make the list show up in HTML
+function displayToDos(parent, thisList) {
+
+
+    parent.innerHTML = '';
+    if(thisList != null && thisList.length > 0){
+    thisList.forEach(taskObject => {
+        parent.appendChild(renderOneToDo(taskObject));
+    })
+    }else {
+        const emptyList = document.createElement('li');
+        emptyList.innerHTML = `No Tasks Found`
+        parent.appendChild(emptyList);
+    }
+
+}
+
 //make one item show up in HTML
 function renderOneToDo(task) {
     const oneTask = document.createElement('li');
