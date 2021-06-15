@@ -1,107 +1,97 @@
-import * as storeHelp from './storeinfo.js'
-import * as helper from './helperfunc.js'
-/**************************
- * 
- * ***********************/
-let toDoList = null;
+//I was very stuck on the completion of this section. I heavily referenced the examples provided
+//I am doing what I can to make this my own and am following the logic that is being presented.
+//I am not doing a simple copy and paste of this code, but rather taking the time to learn and 
+//understand what is required for a functioning app.
 
-export default class ToDos {
-	//main class contructor
-	constructor(elementID) {
-			this.parentElement = document.getElementById(elementID)
-			this.LSkey = this.parentElement.id;
+// Variables
+export { removeTask, completeTasks, showList, notFinished, finished, addTask};
+export const tasks = document.querySelector(`.todos`);
+export const toDoForm = document.querySelector(`.toDo`);
+export let toDoList = [];
+export let finishedList = [];
+export let unfinishedList = [];
 
-	}
+//Remove task from todo list
+function removeTask(taskID){
 
-    //show list items
-    showAllToDos(){
-    	getToDos(this.LSkey);
-    	displayToDos(this.parentElement, toDoList);
-    	if(toDoList != null) {
-    		this.addEventListeners
-    	}
-    } 
+    toDoList = toDoList.filter(toDo => toDo.taskID !== taskID);
+    toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
 
-	//Add list items
-    addToDo(){
-       	const newTask = document.getElementById('newTask');
-       	saveToDo(this.LSkey, taskContent);
-       	this.showToDoList();
-    }
+} 
 
-    //delete list item
-    toDoDelete(item) {
-    	let task = toDoList.findIndex(task => task.id == item);
-    	toDoList.splice(task, 1);
-    	storeHelp.storeLS(this.LSkey, toDoList);
-    	this.showAllToDos();
-    }
+//List of completed tasks
+function completeTasks(taskID){
 
-    //check box functionality
-    toDoDone(item) {
-    	let task = toDoList.findIndex(task => task.id == item);
-    	toDoList[task].completed = !toDoList[task].completed;
-    	storeHelp.storeLS(this.LSkey, toDoList);
-    	itemDone(item);
+    const taskRef = toDoList.find(toDo => toDo.taskID == taskID);
 
-    }
-
-    filterList(status){
-    	status = filterBy(status);
-    	const filter = toDoList.filter(task => {
-    		if (status != null) {
-    			return task.completed == status;
-    		}
-    		else {
-    			return task;
-    		}
-    	})
-    	displayToDos(this.parentElement, filter);
-    	this.addEventListeners();
-    }
-
-    //add Event Listener
-    addEventListeners() {
-		const listOfItems = Array.from(this.parentElement.children);
-		if (listOfItems.length > 0) {
-			listOfItems.forEach (item => {
-				item.children[0].addEventListener('click' event=> {this.toDoDone(event.currentTarget.id);})
-				
-				item.children[2].addEventListener('click' event => {
-					this.toDoDelete(event.currentTarget.parentElement.children[0].id);
-				})
-				
-			})
-		}
-    }
-}
-
-
-//make the list show up in HTML
-function displayToDos(parent, thisList) {
-
-
-    parent.innerHTML = '';
-    if(thisList != null && thisList.length > 0){
-    thisList.forEach(taskObject => {
-        parent.appendChild(renderOneToDo(taskObject));
-    })
-    }else {
-        const emptyList = document.createElement('li');
-        emptyList.innerHTML = `No Tasks Found`
-        parent.appendChild(emptyList);
-    }
+    taskRef.completed = !taskRef.completed;
+    toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
 
 }
 
-//make one item show up in HTML
-function renderOneToDo(task) {
-    const oneTask = document.createElement('li');
-    task.completed ? oneTask.classList.toggle('completed') : '';
-    oneTask.innerHTML = 
-        `<input id="${task.id}" name="${task.content}" type="checkbox" value="none" ${task.completed ? 'checked' : ''}>
-        <label for="${task.id}">${task.content}</label>
-        <div class="remove">X</div>`;
-    return oneTask;
+//
+function showList(arrayName){
+
+    const listItems = arrayName.map(toDo => 
+        `<li class = "listItem">
+        <input type = "checkbox" ${toDo.completed && "checked"} value = "${toDo.TaskID}" >
+        <span class = "todo_item_name"> <p>${toDo.content} </p></span>
+        <button aria-label = "Remove ${toDo.content}" value = "${toDo.TaskID}" >X</button> 
+        </li>`).join(``);
+
+    tasks.innerHTML = listItems;
+
+} 
+
+//Create list of unfinished tasks
+function notFinished(){
+
+    unfinishedList = toDoList.filter(toDoSingle => toDoSingle.completed == false);
+
 }
 
+//Create list of finish tasks
+function finished(){
+
+    finishedList = toDoList.filter(toDoSingle => toDoSingle.completed == true);
+}
+
+
+function addTask(event){
+
+    event.preventDefault();
+    
+    const taskName = document.getElementById(`newTask`).value
+    
+    const toDo = { 
+        id : Date.now(), 
+        content: taskName, 
+        completed: false 
+    };
+
+
+    toDoList.push(toDo);
+
+    document.getElementById(`newTask`).value = ``;
+
+
+    toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export { submitTask,displayTasks, deleteItem, completedTasks, filterFinished, filterNotFinished};
