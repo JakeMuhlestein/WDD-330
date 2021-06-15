@@ -93,5 +93,3 @@ function addTask(event){
 
 
 
-
-export { submitTask,displayTasks, deleteItem, completedTasks, filterFinished, filterNotFinished};
