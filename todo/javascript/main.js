@@ -4,7 +4,7 @@ import {storeLS, recallLS} from './storeinfo.js';
 
 //Event Listeners
 toDoForm.addEventListener("submit", addTask);
-toDoForm.addEventListener("submitSuccess"), () => showList(list);
+toDoForm.addEventListener("submitSuccess"), () => showList(toDoList);
 toDoForm.addEventListener("submitSuccess", storeLS);
 
 
