@@ -12,6 +12,11 @@ body {
 
 
 }
+
+header{    
+
+
+}
 main {
     flex: 1 0 auto;
     width: 100%;
@@ -25,25 +30,8 @@ main {
 h1 {
     text-align: center;
 }
-main footer p {
-    margin: 0;
-    padding: .5em;
-    width: 100%;
-    height: 100%;
 
-}
-main > footer {
-    display:flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5em;
 
-}
-.filter-button {
-    border: 1px solid black;
-    cursor: pointer;
-}
 .add-button {
     margin: auto auto 1em auto;
     flex-shrink: 0;
@@ -64,4 +52,14 @@ main > footer {
     border: 2px solid;
     font-size: 1em;
 
+}
+.toDo {
+
+  display: flex;
+  justify-content: space-between;
+}
+footer {
+
+  padding: 1rem;
+  margin: auto;
 }
