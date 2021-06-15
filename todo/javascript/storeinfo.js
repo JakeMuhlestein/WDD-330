@@ -1,6 +1,5 @@
 import {toDoList, toDoForm} from'./todofunc.js'
 
-
 // Had difficulty coming up with this. I referenced other students examples to try to figure it out.
 
 //Save to local storage
