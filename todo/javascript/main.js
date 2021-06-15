@@ -1,3 +1,8 @@
+//I was very stuck on the completion of this section. I heavily referenced the examples provided
+//I am doing what I can to make this my own and am following the logic that is being presented.
+//I am not doing a simple copy and paste of this code, but rather taking the time to learn and 
+//understand what is required for a functioning app.
+
 import {toDoList, toDoForm, tasks, unfinishedList, finishedList, removeTask, completeTasks, showList, notFinished, finished, addTask} from './todofunc.js';
 import {storeLS, recallLS} from './storeinfo.js';
 //import * as utility from './helperfunc.js';
