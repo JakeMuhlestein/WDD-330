@@ -3,9 +3,9 @@ import {storeLS, recallLS} from './storeinfo.js';
 //import * as utility from './helperfunc.js';
 
 //Event Listeners
-listForm.addEventListener("submit", addTask);
-listForm.addEventListener("submitSuccess"), () => showList(list);
-listForm.addEventListener("submitSuccess", storeLS);
+toDoForm.addEventListener("submit", addTask);
+toDoForm.addEventListener("submitSuccess"), () => showList(list);
+toDoForm.addEventListener("submitSuccess", storeLS);
 
 
 //Event listener for clicks
