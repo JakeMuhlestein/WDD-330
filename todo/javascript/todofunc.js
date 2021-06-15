@@ -12,17 +12,17 @@ export let finishedList = [];
 export let unfinishedList = [];
 
 //Remove task from todo list
-function removeTask(taskID){
+function removeTask(id){
 
-    toDoList = toDoList.filter(toDo => toDo.taskID !== taskID);
+    toDoList = toDoList.filter(toDo => toDo.id !== id);
     toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
 
 } 
 
 //List of completed tasks
-function completeTasks(taskID){
+function completeTasks(id){
 
-    const taskRef = toDoList.find(toDo => toDo.taskID == taskID);
+    const taskRef = toDoList.find(toDo => toDo.id == id);
 
     taskRef.completed = !taskRef.completed;
     toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
@@ -34,9 +34,9 @@ function showList(arrayName){
 
     const listItems = arrayName.map(toDo => 
         `<li class = "listItem">
-        <input type = "checkbox" ${toDo.completed && "checked"} value = "${toDo.TaskID}" >
-        <span class = "todo_item_name"> <p>${toDo.content} </p></span>
-        <button aria-label = "Remove ${toDo.content}" value = "${toDo.TaskID}" >X</button> 
+        <input type = "checkbox" ${toDo.completed && "checked"} value = "${toDo.id}" >
+        <span class = "todo_item_name"> <p>${toDo.id} </p></span>
+        <button aria-label = "Remove ${toDo.content}" value = "${toDo.id}" >X</button> 
         </li>`).join(``);
 
     tasks.innerHTML = listItems;
