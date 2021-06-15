@@ -1,12 +1,19 @@
+import {toDoList, toDoForm} from'./todofunc.js'
+
+
 // Had difficulty coming up with this. I referenced other students examples to try to figure it out.
 
 //Save to local storage
-export function storeLS(key, list) {
-	localStorage.setItem(key, JSON.stringify(list));
+export function storeLS() {
+	localStorage.setItem("toDoList", JSON.stringify(toDoList));
 }
 
 //Read from local storage
-export function recallLS(key) {
-	let listArray = JSON.parse(localStorage.getItem(key))
-	return listArray;
+export function recallLS() {
+	let listArray = JSON.parse(localStorage.getItem("toDoList"))
+	if (lsTasks.length >= 1) {
+		toDoList.push(...lsTasks);
+		toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"))
+	}
+	
 }
