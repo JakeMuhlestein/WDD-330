@@ -1,4 +1,4 @@
-import {toDoList, toDoForm, tasks, removeTask, completeTasks, showList, notFinished, finished, addTask} from './todofunc.js';
+import {toDoList, toDoForm, tasks, usfinishedList, finishedList, removeTask, completeTasks, showList, notFinished, finished, addTask} from './todofunc.js';
 import {storeLS, recallLS} from './storeinfo.js';
 //import * as utility from './helperfunc.js';
 
@@ -16,7 +16,7 @@ tasks.addEventListener("click", function(event){
     };
 
     if(event.target.matches("input[type = 'checkbox']")) {
-        completedTasks(taskID);
+        completeTasks(taskID);
 
     };
 });
