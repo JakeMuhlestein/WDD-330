@@ -1,1 +1,96 @@
 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>WDD 330 portfolio</h1>
+    <h2>Week 9</h2>
+    <ol>
+      <li>Notes
+		
+		<p><h2>Chapter 9: The windows object</h2>
+		The Browser Object Model is a collection of properties and methods that contain information about the browser and computer screen
+		<br>In a browser environment, the global object is the window object. 
+		<br>Refer to global variables without using the window object
+		<br>The window.alert() method will pause the execution of the program and display a message in a dialog box
+		<br>The window.confirm() method will stop the execution of the program and display a confirmation dialog that shows the message provided as an argument, and giving the options of OK or Cancel. It returns the boolean values of true if the user clicks OK, and false if the user clicks Cancel
+		<br>The window.prompt() method will stop the execution of the program. It displays a dialog that shows a message provided as an argument, as well as an input field that allows the user to enter text. This text is then returned as a string when the user clicks OK. If the user clicks Cancel, null is returned
+		<br>The window object has a navigator property that returns a reference to the Navigator object
+		<br>The window.location property is an object that contains information about the URL of the current page
+		<br>The hostname property returns a string describing the domain of the current URL
+		<br>The reload() method can be used to force a reload of the current page. If it’s given a parameter of true , it will force the browser to reload the page from the server, instead of using a cached page
+		<br>The assign() method can be used to load another resource from a URL provided as a parameter
+		<br>The toString() method returns a string containing the whole URL
+		<br>The window.history property can be used to access information about any previously visited pages in the current browser session
+		<br>A new window can be opened using the window.open() method
+		<br>The close() method can be used to close a window
+		<br>Move a window using the window.moveTo() method. There are two parameters that are the X and Y coordinates of the screen that the window is to be moved to
+		<br>Resize a window using the window.resizeTo() method. This takes two parameters that specify the width and height of the resized window’s dimensions
+		<br>The window.screen object contains information about the screen the browser is displayed on. 
+		<br>Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window.
+		<br>The write() method simply writes a string of text to the page
+		<br>To create a cookie, you assign it to JavaScript’s “cookie jar”, using the document.cookie property
+		<br>The document.cookie property acts like a special type of string. Assigning another cookie to it won’t overwrite the entire property, it will just append it to the end of the string
+		<br>A cookie’s value can be changed by reassigning it to document.cookie using the same name but a different value
+		<br>to see the current contents of the cookie jar, enter document.cookie
+		<br>Cookies are session cookies by default
+		<br>To remove a cookie, you need to set it to expire at a time in the past
+		<br>The window.setTimeout() method accepts a callback to a function as its first parameter and a number of milliseconds as its second parameter
+		<br>The window.setInterval() method works in a similar way to window.setTimeout() , except that it will repeatedly invoke the callback function after every given number of milliseconds
+		<br>The setTimeOut() and setInterval() methods can be used to animate elements on a web page
+		</p>
+
+		<p><h2>Chapter 14: HTML5 APIs</h2>
+		The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser. 
+		<br>he names of these attributes can be decided by the developer, but they must use the following format
+		<br>&emsp;Start with data- 
+		<br>&emsp;Contain only lowercase letters, numbers, hyphens, dots, colons or underscores
+		<br>&emsp;Include an optional string value
+		<br>Each element has a dataset property that can be used to access any data- attributes it contains
+		<br>The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving
+		<br>The position object has several other properties that can be used to find out information about the location and movement of the device
+		<br>&emsp;position.speed property returns the ground speed of the device in meters per second
+		<br>&emsp;position.altitude property returns an estimate of the device’s altitude in meters above 
+		theWGS84ellipsoid, which is a standard measurement for the center of the Earth
+		<br>&emsp;position.heading property returns the direction the device is moving in. This is measured as a bearing in degrees, clockwise from North
+		<br>&emsp;position.timestamp property returns the time that the position information was recorded
+		<br>The postMessage() method can be used to send a messageandstart the worker working. The argument to this method can send any data to the web worker
+		<br>When a message is posted, a message event is fired, so they can be dealt with using an event listener. The data sent with the message as an argument is stored in the data property of the event object that’s passed to the callback function
+		<br>When a worker has completed its task, it can be stopped using the terminate() method from within the main script
+		<br>The Service Worker API allows a worker script to run in the background with the added benefit of being able to intercept network requests. This allows you to take alternative action if the network is offline, and effectively create app-like offline experiences
+		<br>The Notification API allows you to show messages using the system's notifications. This is usually a popup in the corner of the screen
+		<br>Before you can send notifications, you need to get permission granted by the user. This can be achieved using the requestPermission() method of a Notification global object
+		<br>This returns a promise with the permission property of the Notification object set to either 'granted' or 'denied'
+		<br>HTML5 introduced the audio and video tags used to insert audio and video clips into a web page
+		<br>Audio and video elements have a number of properties and methods to control the playback of the clip 
+		<br>&emsp;The play() method will start the clip playing from its current position
+		<br>&emsp;The pause() method will pause the clip at its current position
+		<br>&emsp;The volume property is a number that can be used to set the audio volume
+		<br>&emsp;The muted property is a boolean value that can be used to mute the audio
+		<br>&emsp;The currentTime property is a number value that can be used to jump to another part of the clip
+		<br>&emsp;The playbackRate property is used to fast-forward or rewind the clip by changing its value. A value of 1 is playback at normal speed
+		<br>&emsp;The loop property is a boolean value that can be set to true to make the clip repeat in a loop
+		<br>&emsp;The duration property can be used to see how long the clip lasts
+		<br>The canvas element was introduced to allow graphics to be drawn onto a web page in real time using JavaScript. A canvas element is a rectangular element on the web page. It has a coordinate system that starts at (0,0) in the top-left corner. To add a canvas element to a page, the <canvas> tag is used specifying a height and width 
+		<br>This canvas can now be accessed in a JavaScript program using 
+		<br>&emsp;the document.getElementById() method
+		<br>&emsp;The getContext() method is used to access the context
+		<br>&emsp;The lineWidth property can be used to set the width of any line strokes drawn onto the canvas
+		<br>&emsp;he fillRect() method can draw a filled-in rectangle
+		<br>&emsp;The arc() method can be used to draw an arc of a given radius from a particular point
+		
+		</p>
+
+		
+</li>
+    </ol>
+    
+  </body>
+</html>
+
+
