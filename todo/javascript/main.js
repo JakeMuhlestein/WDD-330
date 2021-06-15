@@ -43,4 +43,4 @@ document.querySelector(`.filterButton`).addEventListener("click", function(event
 });
 
 //This is calling the get tasks function that retrieves information from local storage
-getTasks();
+recallLS();
