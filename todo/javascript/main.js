@@ -1,4 +1,4 @@
-import {toDoList, toDoForm, tasks, usfinishedList, finishedList, removeTask, completeTasks, showList, notFinished, finished, addTask} from './todofunc.js';
+import {toDoList, toDoForm, tasks, unfinishedList, finishedList, removeTask, completeTasks, showList, notFinished, finished, addTask} from './todofunc.js';
 import {storeLS, recallLS} from './storeinfo.js';
 //import * as utility from './helperfunc.js';
 
