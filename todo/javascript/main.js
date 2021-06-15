@@ -1,6 +1,6 @@
-import ToDos from './todofunc.js';
-import from './storeinfo.js';
-import * as utility from './helperfunc.js';
+import {toDoList, toDoForm, tasks, removeTask, completeTasks, showList, notFinished, finished, addTask} from './todofunc.js';
+import {storeLS, recallLS} from './storeinfo.js';
+//import * as utility from './helperfunc.js';
 
 //Event Listeners
 listForm.addEventListener("submit", addTask);
@@ -10,13 +10,13 @@ listForm.addEventListener("submitSuccess", storeLS);
 
 //Event listener for clicks
 tasks.addEventListener("click", function(event){
-    const id = parseInt(event.target.value);
+    const taskID = parseInt(event.target.value);
     if(event.target.matches("button")) {
-        deleteItem(id);
+        removeTask(taskID);
     };
 
     if(event.target.matches("input[type = 'checkbox']")) {
-        completedTasks(id);
+        completedTasks(taskID);
 
     };
 });
@@ -24,21 +24,21 @@ tasks.addEventListener("click", function(event){
 // Listners for filter button clicks
 
 //Filters by all tasks
-document.querySelector(`.filter-button`).addEventListener("click", function(event){
+document.querySelector(`.filterButton`).addEventListener("click", function(event){
     if(event.target.matches("#allTasks")) {
-        displayTasks(toDoList);
+        showList(toDoList);
         
     };
     //filters by unfinished tasks
     if(event.target.matches("#pendingTasks")) {
-        filterNotFinished();
-        displayTasks(unfinishedList);
+        notFinished();
+        showList(unfinishedList);
 
     };
     //filter tasks that are compelted
     if(event.target.matches("#compTasks")) {
-        filterFinished();
-        displayTasks(finishedList);
+        finished();
+        showList(finishedList);
     };
 });
 
