@@ -12,7 +12,7 @@ export function recallLS() {
 	let listArray = JSON.parse(localStorage.getItem("toDoList"));
 	if (listArray.length >= 1) {
 		toDoList.push(...listArray);
-		toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
+		toDoForm.dispatchEvent(new CustomEvent("submitSuccess"));
 	}
 	
 }
