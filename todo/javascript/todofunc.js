@@ -15,7 +15,7 @@ export let unfinishedList = [];
 function removeTask(id){
 
     toDoList = toDoList.filter(toDo => toDo.id !== id);
-    toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
+    toDoForm.dispatchEvent(new CustomEvent("submitSuccess"));
 
 } 
 
@@ -25,7 +25,7 @@ function completeTasks(id){
     const taskRef = toDoList.find(toDo => toDo.id == id);
 
     taskRef.completed = !taskRef.completed;
-    toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
+    toDoForm.dispatchEvent(new CustomEvent("submitSuccess"));
 
 }
 
@@ -75,7 +75,7 @@ function addTask(event){
     document.getElementById(`newTask`).value = ``;
 
 
-    toDoForm.dispatchEvent(new CustomEvent("tasksSubmitted"));
+    toDoForm.dispatchEvent(new CustomEvent("submitSuccess"));
 } 
 
 
