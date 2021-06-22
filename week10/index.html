@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 330 portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>WDD 330 portfolio</h1>
+    <h2>Week 10</h2>
+    <ol>
+      <li>Notes
 
+      <p> <h2>MDN: Validating Forms</h2>
+		Client-side form validation helps ensure data submitted matches the requirements set forth in the various form controls
+		<br>Client-side validation should not be considered an exhaustive security measure
+		<br>Form validation provides feedback when you don't enter your data in the format they are expecting
+		<br>In client-side validation the browser and/or the web server will check to see that the data is in the correct format and within the constraints set by the application
+		<br>One of the most significant features of HTML5 form controls is the ability to validate most user data without relying on JavaScript
+		<br>&emsp;required: Specifies whether a form field needs to be filled in before the form can be submitted.
+		<br>&emsp;minlength and maxlength: Specifies the minimum and maximum length of textual data (strings)
+		<br>&emsp;min and max: Specifies the minimum and maximum values of numerical input types
+		<br>&emsp;type: Specifies whether the data needs to be a number, an email address, or some other specific preset type. 
+		<br>&emsp;pattern: Specifies a regular expression that defines a pattern the entered data needs to follow
+		<br>The simplest HTML5 validation feature is the required attribute
+		<br>To make an input mandatory, add this attribute to the element. When this attribute is set, the element matches the :required
+		<br>A regular expression (regex) is a pattern that can be used to match character combinations in text strings
+		<br>You can constrain the character length of all text fields created by "input" or "text area" by using the minlength and maxlength attributes
+		<br>For number fields the min and max attributes can be used to provide a range of valid values
+		<br>
+
+	  </p>
+
+	  <p><h2>MDN: Using Fetch</h2>
+		The Fetch API provides a JavaScript interface for accessing and manipulating parts of the HTTP pipeline, such as requests and responses
+		<br>The fetch specification differs from jQuery.ajax() in the following significant ways
+		<br>&emsp;The Promise returned from fetch() won’t reject on HTTP error status even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the ok property of the response set to false if the response isn’t in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing
+		<br>&emsp;fetch() won’t send cross-origin cookies unless you set the credentials init option
+		<br>To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add credentials: 'include' to the init object you pass to the fetch() method
+		<br>Use fetch() to POST JSON-encoded data
+		<br>Files can be uploaded using an HTML "input type="file" /" input element, FormData() and fetch()
+		<br>An accurate check for a successful fetch() would include checking that the promise resolved, then checking that the Response.ok property has a value of true
+		<br>The Headers interface allows you to create your own headers object via the Headers() constructor. A headers object is a simple multi-map of names to values
+		<br>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object
+		<br>Response instances are returned when fetch() promises are resolved
+		<br>
+
+
+	
+	  </p>
+
+	  </li>
+
+    </ol>
+    
+  </body>
+</html>
