@@ -35,7 +35,7 @@ function showList(arrayName){
     const listItems = arrayName.map(toDo => 
         `<li class = "listItem">
         <input type = "checkbox" ${toDo.completed && "checked"} value = "${toDo.id}" >
-        <span class = "todo_item_name"> <p>${toDo.id} </p></span>
+        <span class = "todo_item_name"> <p>${toDo.content} </p></span>
         <button aria-label = "Remove ${toDo.content}" value = "${toDo.id}" >X</button> 
         </li>`).join(``);
 
