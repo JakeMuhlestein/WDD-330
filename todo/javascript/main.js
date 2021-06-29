@@ -3,7 +3,7 @@
 //I am not doing a simple copy and paste of this code, but rather taking the time to learn and 
 //understand what is required for a functioning app.
 
-import {toDoList, toDoForm, tasks, unfinishedList, finishedList, removeTask, completeTasks, showList, notFinished, finished, addTask} from './todofunc.js';
+import {removeTask, completeTasks, showList, notFinished, finished, addTask, tasks, toDoForm, toDoList, finishedList, unfinishedList} from './todofunc.js';
 import {storeLS, recallLS} from './storeinfo.js';
 //import * as utility from './helperfunc.js';
 
