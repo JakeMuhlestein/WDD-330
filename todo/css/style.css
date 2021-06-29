@@ -58,6 +58,11 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+
+.todo_item_name {
+  justify-self: start;
+  text-align: left;
+}
 footer {
 
   padding: 1rem;
