@@ -46,14 +46,14 @@ function showList(arrayName){
 //Create list of unfinished tasks
 function notFinished(){
 
-    unfinishedList = toDoList.filter(toDoSingle => toDoSingle.completed == false);
+    return unfinishedList = toDoList.filter(toDoSingle => toDoSingle.completed == false);
 
 }
 
 //Create list of finish tasks
 function finished(){
 
-    finishedList = toDoList.filter(toDoSingle => toDoSingle.completed == true);
+    return finishedList = toDoList.filter(toDoSingle => toDoSingle.completed == true);
 }
 
 
