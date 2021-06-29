@@ -36,14 +36,15 @@ document.querySelector(`.filterButton`).addEventListener("click", function(event
     };
     //filters by unfinished tasks
     if(event.target.matches("#pendingTasks")) {
-        notFinished();
-        showList(notFinished);
-
+        //notFinished();
+        //showList(notFinished);
+        showList(notFinished());
     };
     //filter tasks that are compelted
     if(event.target.matches("#compTasks")) {
-        finished();
-        showList(finished);
+        //finished();
+        //
+        showList(finished());
     };
 });
 
